@@ -1,6 +1,0 @@
-This message will be written to a file.
-78
-7878782378
-237823
-7823
-7823
