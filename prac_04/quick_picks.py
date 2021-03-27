@@ -21,27 +21,11 @@ def main():
         for pick in almost_random_picks:
             while pick in almost_random_picks:
                 pick = random.randint(1, 45)
-                # print("Repetition Detected")
-        # print(str(almost_random_picks))
         almost_random_picks.sort()
         random_picks = almost_random_picks
-        # print("{:2} {:2} {:2} {:2} {:2} {:2}".format(*random_picks))
-        # print(" ".join("{:2}".format(pick) for pick in random_picks))
-        # Alternative of the previous line as a loop
         for number in random_picks:
             print("{:2}".format(number), end=" ")
         print("")
 
-
-'''
-            quickset = quick_pick for quick_pick in quick_pick
-
-                #print(len(number), end=" ")
-                if len(number) > 1:
-                    print("Repetition Detected")
-            print("{:2}".format(quick_pick), end=" ")
-        print(" one")
-        print("quick_pick is:", quick_pick)
-'''
 
 main()
