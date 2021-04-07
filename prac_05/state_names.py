@@ -8,7 +8,10 @@ File needs reformatting
 CODE_TO_NAME = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Northern Territory",
                 "WA": "Western Australia", "ACT": "Australian Capital Territory",
                 "VIC": "Victoria", "TAS": "Tasmania"}
-
+MENU = """Type the state code to reveal its name
+To list all codes and names press enter anytime."""
+# print(CODE_TO_NAME)
+print(MENU)
 state_code = input("Enter short state: ").upper()
 while state_code != "":
     if state_code in CODE_TO_NAME:
@@ -16,3 +19,7 @@ while state_code != "":
     else:
         print("Invalid short state")
     state_code = input("Enter short state: ").upper()
+print("Here is a list of all state codes and name for your reference:")
+
+for code, name in CODE_TO_NAME.items():
+    print("{:3} is {}".format(code, name))
