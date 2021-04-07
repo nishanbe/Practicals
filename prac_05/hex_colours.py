@@ -13,6 +13,11 @@ def main():
     """This program allows you to get the hex code of colour names you enter"""
     print("Enter any of the colour names below to get its hex code:")
     print(*NAME_TO_COLOUR.keys(), sep=", ")
+    colour_name = input("Enter a colour name: ").upper()
+    while colour_name != "":
+        colour_name = input("Enter a colour name: ").upper()
+
+    print("Thanks for using this program. Hold tight for the next version!")
 
 
 if __name__ == '__main__':
