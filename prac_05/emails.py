@@ -2,6 +2,7 @@
 CP1404/CP5632 Practical 05
 Email Register
 """
+EMAIL_REGISTER = {}
 
 
 def main():
@@ -11,6 +12,8 @@ def main():
     confirmed_name = input("Is your name {}? (Y/n) ".format(predicted_full_name)).upper()
     name = validate_name(predicted_full_name, confirmed_name)
     print(name)
+    store_in_email_register(name, email)
+    print(EMAIL_REGISTER)
 
 
 def extract_full_name(email):
@@ -29,6 +32,11 @@ def validate_name(predicted_full_name, confirmed_name):
         name = input("Name: ")
         name = name.title()
     return name
+
+
+def store_in_email_register(name, email):
+    """Store the name and email in an email registry (dictionary)"""
+    EMAIL_REGISTER[name] = email
 
 
 if __name__ == '__main__':
