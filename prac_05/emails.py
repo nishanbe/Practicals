@@ -83,14 +83,14 @@ def validate_email(email):
     while not valid_email:
         valid_characters = validate_characters(email)
         if not valid_characters:
-            valid_email = False
+            # valid_email = False
             email = input("Email: ")
         else:
             # print("---Char seems ok")
             valid_formatting = validate_corporate_formatting(email)
             if not valid_formatting:
                 # print("---Format invalid")
-                valid_email = False
+                # valid_email = False
                 email = input("Email: ")
             else:
                 # print("---Passed character & formatting validation")
@@ -115,15 +115,10 @@ def validate_name(predicted_name, accept_predicted):
     else:
         name = input("Name: ")
         if name == "":
-            print("Invalid. Name can not be black")
+            print("Invalid. Name can not be blank")
             name = input("Name: ")
         name = name.title()
     return name
-
-
-def store_in_email_register(email_register, name, email):
-    """Store the name and email in an email registry (dictionary)"""
-    email_register[name] = email
 
 
 def display_email_register(email_register):
