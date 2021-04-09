@@ -17,7 +17,7 @@ def main():
                 accept_predicted = input("Is your name {}? (Y/n) ".format(predicted_name)).upper()
                 name = validate_name(predicted_name, accept_predicted)
                 # print("Stored name:", name)
-                store_in_email_register(email_register, name, email)
+                email_register[name] = email
                 # print("Current register:", email_register)
                 # email = input("Email: ")
                 # validate_email(email)
