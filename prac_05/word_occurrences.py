@@ -21,10 +21,7 @@ def main():
         words_dict[word] = words_dict.get(word, 0) + 1
 
     # Find the width of the longest word
-    word_lengths = []
-    for word in words:
-        word_lengths.append(len(word))
-    longest_word_width = max(word_lengths)
+longest_word_width = max([len(word) for word in words])
 
     # Display a list of words with their counts in aligned columns
     for word, count in words_dict.items():
