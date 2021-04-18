@@ -1,18 +1,15 @@
 class ProgrammingLanguage:
-    def __init__(self, typing, reflection, year):
+    def __init__(self, name, typing, reflection, year):
+        self.name = name
         self.typing = typing
         self.reflection = reflection
         self.year = year
+
+    def __str__(self):
+        return "{}, {}, Typing, Reflection = {}, First appeared in {}".format(self.name, self.typing,
+                                                                              self.reflection, self.year)
 
     def is_dynamic(self):
         if self.typing == "Dynamic":
             return True
         return False
-
-
-typing = input("Type: ")
-reflection = "Yes"
-year = 1991
-
-p1 = ProgrammingLanguage(typing, reflection, year)
-print(p1.is_dynamic())
