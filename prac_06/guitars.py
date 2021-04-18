@@ -4,8 +4,10 @@ from prac_06.guitar import Guitar
 
 def main():
     """This program will get and reflect the guitar information you enter"""
+    print("My guitars!")
     name = input("Guitar: ")
     guitars = []
+
     while name != "":
         try:
             year = int(input("Year: "))
@@ -24,7 +26,7 @@ def main():
             name = input("Guitar: ")
         except ValueError:
             print("Invalid input, please try again.")
-    else:
+
         name_width = max([len(guitar.name) for guitar in guitars])
         cost_width = max([len(str(guitar.cost)) for guitar in guitars])
 
