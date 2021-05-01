@@ -9,6 +9,17 @@ Restart the meter (start a new fare) and then drive the car 100km
 Print the details and the current fare
 """
 
-taxi1 = Taxi("Prius 1", 100, 1.23)
-taxi1.drive(40)
+name = "Prius 1"
+fuel = 100
+fare = 1.23
+distance = 40
+
+taxi1 = Taxi(name, fuel, fare)
+taxi1.drive(distance)
+print(taxi1)
+
+taxi1.start_fare() # Restart the meter
+distance2 = 100
+
+taxi1.drive(distance2)
 print(taxi1)
