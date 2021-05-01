@@ -11,10 +11,9 @@ Print the details and the current fare
 
 name = "Prius 1"
 fuel = 100
-fare = 1.23
 distance = 40
 
-taxi1 = Taxi(name, fuel, fare)
+taxi1 = Taxi(name, fuel)
 taxi1.drive(distance)
 print(taxi1)
 
