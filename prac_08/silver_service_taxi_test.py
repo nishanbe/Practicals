@@ -7,7 +7,24 @@ car.add_fuel(200)
 
 # Drive 18KM
 car.drive(18)
-fare = car.get_silver_fare()
+fare = car.get_fare()
 
 # Display the result
 print("{}\nA total fare of ${:,.2f}".format(car, fare))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
